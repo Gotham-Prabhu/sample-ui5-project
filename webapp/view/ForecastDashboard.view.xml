@@ -1,0 +1,18 @@
+<mvc:View
+	controllerName="sap.ui.excel.ui5-sheetjs-t.controller.ForecastDashboard"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+    <Page>
+        <customHeader>
+            <f:ShellBar core:require="{ Helper: 'sap/ui/excel/ui5-sheetjs-t/util/Helper' }" title="{i18n>appTitle}" homeIcon="{:= Helper.resolvePath('./img/OIP.png') }" />
+        </customHeader>
+        <content>
+        </content>
+    </Page>
+</mvc:View>
