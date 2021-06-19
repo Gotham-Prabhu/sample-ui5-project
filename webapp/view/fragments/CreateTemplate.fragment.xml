@@ -1,0 +1,76 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+>
+    <VBox class="sapUiMediumMargin">
+    <Label design="Bold" text="Choose Parameters"/>
+        <f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+            <f:content>
+                <Label text="Supplier AN-ID" />
+                <Input id="idSupplierANID" value="{SupplierANID}">
+                    <layoutData>
+                        <l:GridData span="XL1 L2 M2 S10" />
+                    </layoutData>
+                </Input>
+                <Label text="Supplier Name" />
+				<Input value="{SupplierName}">
+                    <layoutData>
+                        <l:GridData span="XL1 L2 M2 S10" />
+                    </layoutData>
+                </Input>
+                <Label text="Time Range" />
+				<HBox>
+                <DatePicker
+						id="DP1"
+						value="2021-05-02" valueFormat="yyyy-MM-dd" displayFormat="long"
+						change=".handleStartDateChange"
+						class="sapUiSmallMarginBottom">
+                    <layoutData>
+                        <l:GridData span="XL1 L2 M2 S3" />
+                    </layoutData>
+                </DatePicker>
+				<Text text="-" class="sapUiSmallMarginBeginEnd"/>
+				 <DatePicker
+						id="DP2"
+						value="2022-02-20" valueFormat="yyyy-MM-dd" displayFormat="long"
+						change=".handleEndDateChange"
+						class="sapUiSmallMarginBottom">
+                    <layoutData>
+                        <l:GridData span="XL1 L2 M2 S3" />
+                    </layoutData>
+                </DatePicker>
+				</HBox>
+                <Label text="Periodicity" />
+                <Select id="periodicity" selectedKey="{Periodicity}">
+                    <items>
+                        <core:Item text="Daily" key="Daily"/>
+                        <core:Item text="Weekly" key="Weekly"/>
+                        <core:Item text="Monthly" key="Monthly"/>
+                        <core:Item text="Yearly" key="Yearly"/>
+                    </items>
+					<layoutData>
+                        <l:GridData span="XL1 L2 M2 S10" />
+                    </layoutData>
+                </Select>
+            </f:content>
+        </f:SimpleForm>
+		<Button type="Emphasized" text="Create Template" class="sapUiSmallMarginTop" press=".onCreateTemplate" />
+    </VBox>
+</core:FragmentDefinition>

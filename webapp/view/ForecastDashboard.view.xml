@@ -3,16 +3,40 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:f="sap.f"
+	xmlns:l="sap.ui.layout"
+    xmlns:card="sap.f.cards"
 	xmlns="sap.m"
 	displayBlock="true"
 	height="100%"
-	busyIndicatorDelay="0"
+	busyIndicatorDelay="5"
 >
     <Page>
         <customHeader>
             <f:ShellBar core:require="{ Helper: 'sap/ui/excel/ui5-sheetjs-t/util/Helper' }" title="{i18n>appTitle}" homeIcon="{:= Helper.resolvePath('./img/OIP.png') }" />
         </customHeader>
         <content>
+            <f:Card class="sapUiLargeMargin" width="600px">
+                <f:header>
+                    <card:Header
+				title="Forecast Template"
+				subtitle="Choose filters to create the template"
+				iconSrc="sap-icon://business-objects-experience" />
+                </f:header>
+                <f:content>
+                    <core:Fragment fragmentName="sap.ui.excel.ui5-sheetjs-t.view.fragments.CreateTemplate" type="XML" />
+                </f:content>
+            </f:Card>
+            <f:Card class="sapUiLargeMargin" width="400px">
+                <f:header>
+                    <card:Header
+				title="Forecast Upload"
+				subtitle="Upload Forecast File and Edit"
+				iconSrc="sap-icon://excel-attachment" />
+                </f:header>
+                <f:content>
+                     <core:Fragment fragmentName="sap.ui.excel.ui5-sheetjs-t.view.fragments.UploadForecast" type="XML" />
+                </f:content>
+            </f:Card>
         </content>
     </Page>
 </mvc:View>
