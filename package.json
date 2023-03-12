@@ -15,7 +15,7 @@
 		"@ui5/cli": "^2.11.2",
 		"ui5-middleware-simpleproxy": "^0.7.2",
 		"ui5-middleware-livereload": "^0.5.4",
-		"eslint": "^7.28.0",
+		"eslint": "^8.36.0",
 		"local-web-server": "^4.2.1",
 		"rimraf": "^3.0.2"
 	},
